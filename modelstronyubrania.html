@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="SB">
+        <title>JDM CAR SHOP</title>
+        <link type="text/css" rel="stylesheet" href="ubrania.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-------------------- zdjecia ----------------------->
+        <div class="row">
+        <div class="slideshow-container">
+            <div class="mySlides">
+              <img src="zdjęcia/zdjecie 2.png" style="width:500px">
+            </div>
+        
+            <div class="mySlides">
+              <img src="zdjęcia/zdjecie 3.png" style="width:500px">
+            </div>
+        
+            <div class="mySlides">
+              <img src="zdjęcia/cos.png" style="width:500px">
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+
+        
+
+          <div class="row2">
+          <div class="product-container">
+            <div class="product-title">Koszulka</div>
+            <div class="product-price">Cena:<s>129.99 PLN</s>   <g>99.99 PLN</g></div>
+            
+          <!-------------------- S M L XL ----------------------->
+          
+          
+          <div class="square-container">
+            <div class="square square-xs">
+                <p>XS</p>
+              </div>
+            <div class="square square-s">
+              <p>S</p>
+            </div>
+            <div class="square square-m">
+              <p>M</p>
+            </div>
+            <div class="square square-l">
+              <p>L</p>
+            </div>
+            <div class="square square-xl">
+              <p>XL</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+ <!-------------------- rozwijalne ----------------------->
+
+ <section>
+  <h1> hypertext according</h1>
+  <details>
+    <summary>OPIS</summary>
+    <p>lorem impsum chuj to wi</p>
+  </details>
+  <details>
+    <summary>SKŁAD I ZALECENIA</summary>
+    <p>lorem impsum chuj to wi</p>
+  </details>
+  <details>
+    <summary>DOSTAWA</summary>
+    <p>lorem impsum chuj to wi</p>
+  </details>
+ </section>
+
+        <!-------------------- XS S M L XL ----------------------->
+        <script>
+            const squares = document.querySelectorAll('.square');
+squares.forEach(square => {
+  square.addEventListener('click', () => {
+    squares.forEach(s => s.classList.remove('selected'));
+    square.classList.add('selected');
+  });
+});
+        </script>
+       <!-------------------- zdjecia ----------------------->   
+          <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+        
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+        
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+        
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              slides[slideIndex-1].style.display = "block";  
+            }
+          </script>
+
+    </body>
+    <html>
